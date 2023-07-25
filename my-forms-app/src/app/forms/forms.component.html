@@ -1,0 +1,93 @@
+
+<div class="d-flex justify-content-center mt-4">
+    <div class="card col-lg-6 col-md-8 col-sm-8 col-12">
+        <div class="card-header">
+            <h1 class="alert alert-primary text-center">Forms</h1>
+        </div>
+        <div class="card-body">
+            <form autocomplete="off" (ngSubmit)="save(name,email,phoneNumber)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                      class="form-control"
+                      id="name"
+                      [ngModelOptions]="{standalone:true}"
+                      [(ngModel)]="user.name"
+                      #name
+                      (keyup)="checkValidation($event)"
+                      required
+                      minlength="3" />
+                    <div class="invalid-feedback">
+                        İsim alanı en az 3 karakter olmalıdır
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="email">Email</label>
+                    <input
+                      class="form-control"
+                      id="email"
+                      type="email"                      
+                      [(ngModel)]="user.email"
+                      [ngModelOptions]="{standalone:true}"
+                      required
+                      minlength="3"
+                      email
+                      #email
+                      (keyup)="checkValidation($event)"/>
+                    <div class="invalid-feedback">
+                        Geçerli bir mail adresi girin
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="phoneNumber">Phone Number</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">+90</span>
+                        <input
+                      class="form-control"
+                      id="phoneNumber"
+                      type="tel"
+                      [(ngModel)]="user.phoneNumber"
+                      [ngModelOptions]="{standalone:true}"
+                      required
+                      minlength="10"
+                      maxlength="10"
+                      #phoneNumber
+                      (keyup)="checkValidation($event)" />
+                      </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="profession">Profession</label>
+                    <select
+                      class="form-control"
+                      id="profession"
+                      [(ngModel)]="user.profession"
+                      [ngModelOptions]="{standalone:true}">
+                        <option value="0">Seçim yapınız...</option>
+                        <option value="1">Muhasebe</option>
+                        <option value="2">Finans</option>
+                        <option value="3">Yazılım</option>
+                    </select>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="description">Açıklama</label>
+                    <textarea
+                      class="form-control"
+                      id="description"
+                      rows="5"
+                      [(ngModel)]="user.description"
+                      [ngModelOptions]="{standalone:true}">
+                    </textarea>
+                </div>
+                <div class="form-group mt-1">
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100"
+                      [disabled]="!name.validity.valid || !email.validity.valid || !phoneNumber.validity.valid">
+                      Kaydet
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>

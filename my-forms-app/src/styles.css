@@ -1,0 +1,12 @@
+@import "/node_modules/@ng-select/ng-select/themes/default.theme.css";
+
+.active{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

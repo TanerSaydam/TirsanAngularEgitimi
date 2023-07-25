@@ -1,0 +1,80 @@
+<div class="d-flex justify-content-center mt-4">
+    <div class="card col-lg-6 col-md-8 col-sm-8 col-12">
+        <div class="card-header">
+            <h1 class="alert alert-primary text-center">
+                Reactive Forms
+            </h1>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="addForm" (ngSubmit)="save()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                      id="name"
+                      class="form-control"
+                      formControlName="name"
+                      (input)="checkValidation('name',$event)">
+                    <div class="invalid-feedback">
+                        İsim en az 3 karakter olmalıdır
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="email">Email</label>
+                    <input
+                      id="email"
+                      type="email"
+                      class="form-control"
+                      formControlName="email"
+                      (input)="checkValidation('email',$event)">
+                      <div class="invalid-feedback">
+                        Geçerli bir mail adresi girin
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="phoneNumber">PhoneNumber</label>
+                    <input
+                      id="phoneNumber"
+                      type="text"
+                      class="form-control"
+                      formControlName="phoneNumber"
+                      (input)="checkValidation('phoneNumber',$event)">
+                      <div class="invalid-feedback">
+                        Geçerli bir telefon numarası yazın
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="profession">Profession</label>
+                   <!-- <select
+                      class="form-control"
+                      id="profession"
+                      formControlName="profession">
+                        <option value="0">Seçim Yapınız...</option>
+                        <option
+                          *ngFor="
+                                let p of professions 
+                                let i = index"
+                          [value]="i + 1">
+                            {{p}}
+                        </option>
+                    </select> -->
+                    <ng-select formControlName="profession">
+                        <ng-option *ngFor="let p of professions let i = index" [value]="i">{{p}}</ng-option>
+                    </ng-select>
+                </div>
+                <div class="form-group mt-1">
+                    Description
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      formControlName="description">
+                    </textarea>
+                </div>
+                <div class="form-group mt-1">
+                    <button [disabled]="!addForm.valid || addForm.controls.profession.value == 0" class="btn btn-primary w-100">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="d-flex justify-content-center mt-4">
+    <div class="card col-lg-6 col-md-8 col-sm-8 col-12">
+        <div class="card-header">
+            <h1 class="alert alert-primary text-center">
+                Ng Forms
+            </h1>
+        </div>
+        <div class="card-body">
+            <form #addForm="ngForm" autocomplete="off" (ngSubmit)="save(addForm)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      #name
+                      class="form-control"
+                      ngModel
+                      required
+                      minlength="3"
+                      [appValidation]="name.validity.valid">
+                    <div class="invalid-feedback">
+                        İsim en az 3 karakter olmalıdır
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="email">Email</label>
+                    <input
+                      id="email"
+                      type="email"
+                      #email
+                      ngModel
+                      name="email"
+                      class="form-control"
+                      required
+                      minlength="3"
+                      email
+                      [appValidation]="email.validity.valid">
+                      <div class="invalid-feedback">
+                        Geçerli bir mail adresi girin
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="phoneNumber">PhoneNumber</label>
+                    <input
+                      id="phoneNumber"
+                      type="tel"
+                      #phoneNumber
+                      name="phoneNumber"
+                      ngModel
+                      class="form-control"
+                      required
+                      minlength="10"
+                      maxlength="10"
+                      [appValidation]="phoneNumber.validity.valid">
+                      <div class="invalid-feedback">
+                        Geçerli bir telefon numarası girin
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="profession">Profession</label>
+                   <select
+                      class="form-control"
+                      id="profession"
+                      #profession
+                      [(ngModel)]="professionInput"
+                      name="profession">
+                        <option value="0">Seçim Yapınız...</option>
+                        <option
+                          *ngFor="
+                                let p of professions 
+                                let i = index"
+                          [value]="i + 1">
+                            {{p}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group mt-1">
+                    <label for="startingDate">StartingDate</label>
+                    <input
+                    id="startingDate"
+                      type="date"
+                      class="form-control"
+                      [(ngModel)]="date"
+                      name="date">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="description">Description</label>
+                    <textarea
+                      id="description"
+                      class="form-control"
+                      rows="5"
+                      #description
+                      name="description"
+                      ngModel>
+                    </textarea>
+                </div>                
+                <div class="form-group mt-1">
+                    <button class="btn btn-primary w-100">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

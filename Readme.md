@@ -15,4 +15,16 @@
 14) Layout dışına component ekleme
 15) 404 sayfası ile bulunmayan sayfa yönlendirmesi
 
+# 2.Ders İşlenen Konular
+1)NgModel ile Form Yapısı
+2)Reactive Form Yapısı
+3)Ng Form Yapısı
+4)Validation Kontrolü (Bootstrap ile örneklendirildi)
+5)Directive (Validation Directive Yazıldı)
+6)Service
+7)WebApi Projesi Oluşturma
+8)Kayıt ve Listeleme Apilerini Angular ile İşleme
+
+
+
 
