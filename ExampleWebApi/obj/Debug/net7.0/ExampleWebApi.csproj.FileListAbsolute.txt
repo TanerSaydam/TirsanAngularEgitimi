@@ -74,3 +74,6 @@ C:\Tırsan Angular Eğitimi\ExampleWebApi\obj\Debug\net7.0\refint\ExampleWebApi.
 C:\Tırsan Angular Eğitimi\ExampleWebApi\obj\Debug\net7.0\ExampleWebApi.pdb
 C:\Tırsan Angular Eğitimi\ExampleWebApi\obj\Debug\net7.0\ExampleWebApi.genruntimeconfig.cache
 C:\Tırsan Angular Eğitimi\ExampleWebApi\obj\Debug\net7.0\ref\ExampleWebApi.dll
+C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\FluentValidation.dll
+C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\EntityFrameworkCorePagination.Nuget.dll

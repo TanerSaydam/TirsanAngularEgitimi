@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BmWJNfTm9IY6KIse6EqZUsd6xlInBMzqmA6rsyInEgAqfO1jBPNOCU7Jdzg7I6RjuaASOchE3q+sYwO7wVuP6Q==",
+  "dgSpecHash": "7xOylDVojKlmSbqq1ZJpsyFoLACkntnWuAy9F57+RzIalSMl5QxIBxqT3bXYPJfSI60FeOafcf5pDkSEwngUIQ==",
   "success": true,
   "projectFilePath": "C:\\Tırsan Angular Eğitimi\\ExampleWebApi\\ExampleWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\taner\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\taner\\.nuget\\packages\\entityframeworkcorepagination.nuget\\1.0.3\\entityframeworkcorepagination.nuget.1.0.3.nupkg.sha512",
+    "C:\\Users\\taner\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.9\\microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -45,6 +47,7 @@
     "C:\\Users\\taner\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\taner\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\taner\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

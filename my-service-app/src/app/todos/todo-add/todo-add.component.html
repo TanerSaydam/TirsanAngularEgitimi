@@ -1,7 +1,11 @@
 <div>
     Yapılacak iş
-    <input [(ngModel)]="todoService.todo">
+    <input [(ngModel)]="todoService.todo.work">
 </div>
-<div>
+<div *ngIf="todoService.isAddButtonActive">
     <button (click)="todoService.save()">Kaydet</button>
+</div>
+<div *ngIf="!todoService.isAddButtonActive">
+    <button (click)="todoService.update()">Güncelle</button>
+    <button (click)="todoService.cancel()">Vazgeç</button>
 </div>

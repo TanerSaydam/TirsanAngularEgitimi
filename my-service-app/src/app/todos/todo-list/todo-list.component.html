@@ -1,3 +1,69 @@
-<ul>
-    <li *ngFor="let t of todoService.todos">{{t.work}}</li>
-</ul>
+<div class="form-group" style="float: right;">
+    <!-- Tamamlanmışlarda Ara
+    <input type="checkbox" [(ngModel)]="isCompletedSearch" /> -->
+    <input [(ngModel)]="todoService.request.search" (search)="getSearch()" (keydown.enter)="getSearch()" type="search" autocomplete="off" placeholder="Aranacak değer...">
+</div>
+<br>
+<br>
+<div class="form-group mt-6">
+    <!-- <table datatable [dtOptions]="dtOptions"></table> -->
+    <div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Work</th>
+                    <th>Is Completed</th>
+                    <th>Created Date</th>
+                    <th>Updated Date</th>
+                    <th>Progress</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of todoService.result.datas let i = index">
+                    <td>{{((i + ((todoService.request.pageNumber -1) * todoService.request.pageSize)) + 1)}}</td>
+                    <td>{{t.work}}</td>
+                    <td><input type="checkbox" [(ngModel)]="t.isCompleted"
+                            (click)="todoService.changeIsCompletedById(t.id)"></td>
+                    <td>{{t.createdDate | date:'dd.MM.yyyy HH:mm:ss'}}</td>
+                    <td>{{t.updatedDate | date:'dd.MM.yyyy HH:mm:ss'}}</td>
+                    <td *ngIf="todoService.isAddButtonActive">
+                        <button (click)="get(t)">Update</button>
+                        <button (click)="removeById(t.id)">Delete</button>
+                    </td>
+                    <td *ngIf="!todoService.isAddButtonActive"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <select [(ngModel)]="todoService.request.pageSize" (change)="todoService.getAll()" class="form-control" style="width: 10%; float: left;">
+            <option>5</option>
+            <option>10</option>
+            <option>20</option>
+            <option>50</option>
+            <option>100</option>
+            <option>500</option>
+            <option>1000</option>
+        </select>
+        <nav style="float: right;">
+            <ul class="pagination">
+                <li class="page-item" (click)="getPage(1)" [ngClass]="todoService.result.isFirstPage ? 'disabled' : ''">
+                    <span class="page-link">İlk</span>
+                </li>
+                <li class="page-item" (click)="getPage(todoService.request.pageNumber - 1)" [ngClass]="todoService.result.isFirstPage ? 'disabled' : ''">
+                    <span class="page-link">Önceki</span>
+                </li>
+                <li class="page-item" [ngClass]="p === todoService.request.pageNumber ? 'active' : ''" (click)="getPage(p)" *ngFor="let p of todoService.pageNumbers"><a class="page-link" href="#">{{p}}</a></li>                
+                
+                <li class="page-item" (click)="getPage(todoService.request.pageNumber + 1)" [ngClass]="todoService.result.isLastPage ? 'disabled' : ''">
+                    <a class="page-link">Sonraki</a>
+                </li>
+                <li class="page-item" (click)="getPage(todoService.result.totalPages)" [ngClass]="todoService.result.isLastPage ? 'disabled' : ''">
+                    <a class="page-link" href="#">Son</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

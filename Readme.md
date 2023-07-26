@@ -25,6 +25,16 @@
 7)WebApi Projesi Oluşturma
 8)Kayıt ve Listeleme Apilerini Angular ile İşleme
 
+# 3.Ders İşlenen Konular
+1) Update ve Delete Apileri Yazıldı ve Kullanıldı
+2) Error Handler Yapısı Hem Backend Hem Frontend'de Yazıldı
+3) Generic Service Yazma Anlatıldı ve Http İstekleri için Generic Service Yazıldı
+4) Toastr Kütüphanesi Kuruldu ve Örnek Kullanımı Yapıldı
+5) Sweet Alert Kütüphanesi Kuruldu ve Örnek Kullanımı Yapıldı
+6) Pipe Kullanımı Anlatıldı ve Örnek Kullanımı Yapıldı
+7) Pagination Yapısı ve Önemi Anlatıldı Proje Üzerinde Örneklendirildi
+
+
 
 
 
