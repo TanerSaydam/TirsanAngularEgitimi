@@ -1,15 +1,28 @@
 ﻿using ExampleWebApi.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExampleWebApi.Context;
 
-public sealed class AppDbContext : DbContext
+public sealed class AppDbContext : IdentityDbContext<AppUser, AppRole, string>
 {
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public AppDbContext(DbContextOptions options) : base(options)
     {
-        optionsBuilder.UseSqlServer("Data Source=DESKTOP-3BJ5GK9\\SQLEXPRESS;Initial Catalog=ExampleDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
     }
+    public DbSet<Todo> Todos { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<ProductImage> ProductImages { get; set; }
 
-    public DbSet<Todo> Todos { get; set; }   
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.Entity<Product>().Property(p => p.Price).HasColumnType("money");
+        builder.Ignore<IdentityUserLogin<string>>();
+        builder.Ignore<IdentityUserRole<string>>();
+        builder.Ignore<IdentityUserClaim<string>>();
+        builder.Ignore<IdentityUserToken<string>>();
+        builder.Ignore<IdentityRoleClaim<string>>();
+        builder.Ignore<IdentityRole<string>>();
+    }
 }
 

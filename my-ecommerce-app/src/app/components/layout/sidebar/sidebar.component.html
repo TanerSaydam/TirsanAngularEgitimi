@@ -1,0 +1,865 @@
+<div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg">
+    <div class="sidebar-content">        
+        <div class="sidebar-section">
+            <div class="sidebar-section-body d-flex justify-content-center">
+                <h5 class="sidebar-resize-hide flex-grow-1 my-auto">Navigation</h5>
+
+                <div>
+                    <button type="button"
+                        class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-control sidebar-main-resize d-none d-lg-inline-flex">
+                        <i class="ph-arrows-left-right"></i>
+                    </button>
+
+                    <button type="button"
+                        class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-mobile-main-toggle d-lg-none">
+                        <i class="ph-x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-section">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+                <!-- Main -->
+                <li class="nav-item-header pt-0">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Main</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link">
+                        <i class="ph-house"></i>
+                        <span>
+                            Ana Sayfa                            
+                        </span>
+                    </a>
+                </li>
+                <li routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-item">
+                    <a routerLink="/products" class="nav-link">
+                        <i class="ph-house"></i>
+                        <span>
+                           Ürünler
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-layout"></i>
+                        <span>Layouts</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Default layout</a></li>
+                        <li class="nav-item"><a href="../../layout_2/full/index.html" class="nav-link">Layout 2</a></li>
+                        <li class="nav-item"><a href="../../layout_3/full/index.html" class="nav-link">Layout 3</a></li>
+                        <li class="nav-item"><a href="../../layout_4/full/index.html" class="nav-link">Layout 4</a></li>
+                        <li class="nav-item"><a href="../../layout_5/full/index.html" class="nav-link">Layout 5</a></li>
+                        <li class="nav-item"><a href="../../layout_6/full/index.html" class="nav-link">Layout 6</a></li>
+                        <li class="nav-item"><a href="../../layout_7/full/index.html" class="nav-link disabled">Layout 7 <span class="badge align-self-center ms-auto">Coming soon</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-swatches"></i>
+                        <span>Themes</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Default</a></li>
+                        <li class="nav-item"><a href="../../../LTR/material/full/index.html" class="nav-link disabled">Material <span class="badge align-self-center ms-auto">Coming soon</span></a></li>
+                        <li class="nav-item"><a href="../../../LTR/clean/full/index.html" class="nav-link disabled">Clean <span class="badge align-self-center ms-auto">Coming soon</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-note-blank"></i>
+                        <span>Starter kit</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="../seed/layout_static.html" class="nav-link">Static layout</a></li>
+                        <li class="nav-item"><a href="../seed/layout_no_header.html" class="nav-link">No header</a></li>
+                        <li class="nav-item"><a href="../seed/layout_no_footer.html" class="nav-link">No footer</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="../seed/layout_fixed_header.html" class="nav-link">Fixed header</a></li>
+                        <li class="nav-item"><a href="../seed/layout_fixed_footer.html" class="nav-link">Fixed footer</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="../seed/layout_2_sidebars_1_side.html" class="nav-link">2 sidebars on 1 side</a></li>
+                        <li class="nav-item"><a href="../seed/layout_2_sidebars_2_sides.html" class="nav-link">2 sidebars on 2 sides</a></li>
+                        <li class="nav-item"><a href="../seed/layout_3_sidebars.html" class="nav-link">3 sidebars</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="../seed/layout_boxed_page.html" class="nav-link">Boxed page</a></li>
+                        <li class="nav-item"><a href="../seed/layout_boxed_content.html" class="nav-link">Boxed content</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../../../../docs/other_changelog.html" class="nav-link">
+                        <i class="ph-list-numbers"></i>
+                        <span>Changelog</span>
+                        <span class="badge bg-primary align-self-center rounded-pill ms-auto">4.0</span>
+                    </a>
+                </li>
+
+                <!-- Forms -->
+                <li class="nav-item-header">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Forms</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-note-pencil"></i>
+                        <span>Form components</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="form_autocomplete.html" class="nav-link">Autocomplete</a></li>
+                        <li class="nav-item"><a href="form_checkboxes_radios.html" class="nav-link">Checkboxes &amp; radios</a></li>
+                        <li class="nav-item"><a href="form_dual_listboxes.html" class="nav-link">Dual Listboxes</a></li>
+                        <li class="nav-item"><a href="form_controls_extended.html" class="nav-link">Extended controls</a></li>
+                        <li class="nav-item"><a href="form_floating_labels.html" class="nav-link">Floating labels</a></li>
+                        <li class="nav-item"><a href="form_actions.html" class="nav-link">Form actions</a></li>
+                        <li class="nav-item"><a href="form_wizard.html" class="nav-link">Form wizard</a></li>
+                        <li class="nav-item"><a href="form_inputs.html" class="nav-link">Input fields</a></li>
+                        <li class="nav-item"><a href="form_input_groups.html" class="nav-link">Input groups</a></li>
+                        <li class="nav-item"><a href="form_multiselect.html" class="nav-link">Multiselect</a></li>
+                        <li class="nav-item"><a href="form_select2.html" class="nav-link">Select2 selects</a></li>
+                        <li class="nav-item"><a href="form_tags.html" class="nav-link">Tags</a></li>
+                        <li class="nav-item"><a href="form_validation_styles.html" class="nav-link">Validation styles</a></li>
+                        <li class="nav-item"><a href="form_validation_library.html" class="nav-link">Validation library</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-text-aa"></i>
+                        <span>Text editors</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">CKEditor</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="editor_ckeditor_classic.html" class="nav-link">Classic</a></li>
+                                <li class="nav-item"><a href="editor_ckeditor_document.html" class="nav-link">Document</a></li>
+                                <li class="nav-item"><a href="editor_ckeditor_balloon.html" class="nav-link">Balloon</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="editor_quill.html" class="nav-link">Quill</a></li>
+                        <li class="nav-item"><a href="editor_trumbowyg.html" class="nav-link">Trumbowyg</a></li>
+                        <li class="nav-item"><a href="editor_code.html" class="nav-link">Code</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-hand-pointing"></i>
+                        <span>Pickers</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="picker_color.html" class="nav-link">Color pickers</a></li>
+                        <li class="nav-item"><a href="picker_date.html" class="nav-link">Date &amp; time pickers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-browser"></i>
+                        <span>Form layouts</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="form_layout_horizontal.html" class="nav-link">Horizontal form</a></li>
+                        <li class="nav-item"><a href="form_layout_vertical.html" class="nav-link">Vertical form</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="form_layout_grid.html" class="nav-link">Input grid</a></li>
+                    </ul>
+                </li>
+                <!-- /forms -->
+
+                <!-- Components -->
+                <li class="nav-item-header">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Components</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-squares-four"></i>
+                        <span>Basic components</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="components_accordion.html" class="nav-link">Accordion</a></li>
+                        <li class="nav-item"><a href="components_alerts.html" class="nav-link">Alerts</a></li>
+                        <li class="nav-item"><a href="components_badges.html" class="nav-link">Badges</a></li>
+                        <li class="nav-item"><a href="components_breadcrumbs.html" class="nav-link">Breadcrumbs</a></li>
+                        <li class="nav-item"><a href="components_buttons.html" class="nav-link">Buttons</a></li>
+                        <li class="nav-item"><a href="components_carousel.html" class="nav-link">Carousel</a></li>
+                        <li class="nav-item"><a href="components_collapsible.html" class="nav-link">Collapsible</a></li>
+                        <li class="nav-item"><a href="components_dropdowns.html" class="nav-link">Dropdown menus</a></li>
+                        <li class="nav-item"><a href="components_list_group.html" class="nav-link">List group</a></li>
+                        <li class="nav-item"><a href="components_media.html" class="nav-link">Media objects</a></li>
+                        <li class="nav-item"><a href="components_modals.html" class="nav-link">Modals</a></li>
+                        <li class="nav-item"><a href="components_offcanvas.html" class="nav-link">Offcanvas</a></li>
+                        <li class="nav-item"><a href="components_pagination.html" class="nav-link">Pagination</a></li>
+                        <li class="nav-item"><a href="components_pills.html" class="nav-link">Pills</a></li>
+                        <li class="nav-item"><a href="components_placeholder.html" class="nav-link">Placeholder</a></li>
+                        <li class="nav-item"><a href="components_popovers.html" class="nav-link">Popovers</a></li>
+                        <li class="nav-item"><a href="components_progress.html" class="nav-link">Progress</a></li>
+                        <li class="nav-item"><a href="components_scrollspy.html" class="nav-link">Scrollspy</a></li>
+                        <li class="nav-item"><a href="components_tabs.html" class="nav-link">Tabs</a></li>
+                        <li class="nav-item"><a href="components_toasts.html" class="nav-link">Toasts</a></li>
+                        <li class="nav-item"><a href="components_tooltips.html" class="nav-link">Tooltips</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-article"></i>
+                        <span>Content styling</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="content_page_header.html" class="nav-link">Page header</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="content_cards.html" class="nav-link">Cards</a></li>
+                        <li class="nav-item"><a href="content_cards_header.html" class="nav-link">Card header elements</a></li>
+                        <li class="nav-item"><a href="content_cards_footer.html" class="nav-link">Card footer elements</a></li>
+                        <li class="nav-item"><a href="content_cards_content.html" class="nav-link">Card content</a></li>
+                        <li class="nav-item"><a href="content_cards_layouts.html" class="nav-link">Card layouts</a></li>
+                        <li class="nav-item"><a href="content_cards_draggable.html" class="nav-link">Draggable cards</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="content_helpers_flex.html" class="nav-link">Flex utilities</a></li>
+                        <li class="nav-item"><a href="content_helpers.html" class="nav-link">Helper classes</a></li>
+                        <li class="nav-item"><a href="content_grid.html" class="nav-link">Grid system</a></li>
+                        <li class="nav-item"><a href="content_syntax_highlighter.html" class="nav-link">Syntax highlighter</a></li>
+                        <li class="nav-item"><a href="content_text_styling.html" class="nav-link">Text styling</a></li>
+                        <li class="nav-item"><a href="content_typography.html" class="nav-link">Typography</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-dots-three-circle"></i>
+                        <span>Extra components</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="extra_noty.html" class="nav-link">Noty notifications</a></li>
+                        <li class="nav-item"><a href="extra_sweetalert.html" class="nav-link">Sweet alert</a></li>
+                        <li class="nav-item"><a href="extra_sliders_noui.html" class="nav-link">NoUI sliders</a></li>
+                        <li class="nav-item"><a href="extra_sliders_ion.html" class="nav-link">Ion range sliders</a></li>
+                        <li class="nav-item"><a href="extra_trees.html" class="nav-link">Dynamic tree views</a></li>
+                        <li class="nav-item"><a href="extra_fab.html" class="nav-link">Floating action buttons</a></li>
+                        <li class="nav-item"><a href="extra_session_timeout.html" class="nav-link">Session timeout</a></li>
+                        <li class="nav-item"><a href="extra_idle_timeout.html" class="nav-link">Idle timeout</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-drop"></i>
+                        <span>Color system</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="colors_primary.html" class="nav-link">Primary palette</a></li>
+                        <li class="nav-item"><a href="colors_secondary.html" class="nav-link">Secondary palette</a></li>
+                        <li class="nav-item"><a href="colors_danger.html" class="nav-link">Danger palette</a></li>
+                        <li class="nav-item"><a href="colors_success.html" class="nav-link">Success palette</a></li>
+                        <li class="nav-item"><a href="colors_warning.html" class="nav-link">Warning palette</a></li>
+                        <li class="nav-item"><a href="colors_info.html" class="nav-link">Info palette</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="colors_pink.html" class="nav-link">Pink palette</a></li>
+                        <li class="nav-item"><a href="colors_purple.html" class="nav-link">Purple palette</a></li>
+                        <li class="nav-item"><a href="colors_indigo.html" class="nav-link">Indigo palette</a></li>
+                        <li class="nav-item"><a href="colors_teal.html" class="nav-link">Teal palette</a></li>
+                        <li class="nav-item"><a href="colors_yellow.html" class="nav-link">Yellow palette</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-spinner spinner"></i>
+                        <span>Animations</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="animations_css3.html" class="nav-link">CSS3 animations</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Velocity animations</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="animations_velocity_basic.html" class="nav-link">Basic usage</a></li>
+                                <li class="nav-item"><a href="animations_velocity_ui.html" class="nav-link">UI pack effects</a></li>
+                                <li class="nav-item"><a href="animations_velocity_examples.html" class="nav-link">Advanced examples</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-smiley-wink"></i>
+                        <span>Icons</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="icons_phosphor.html" class="nav-link">Phosphor</a></li>
+                        <li class="nav-item"><a href="icons_icomoon.html" class="nav-link">Icomoon</a></li>
+                        <li class="nav-item"><a href="icons_material.html" class="nav-link">Material</a></li>
+                        <li class="nav-item"><a href="icons_fontawesome.html" class="nav-link">Font awesome</a></li>
+                    </ul>
+                </li>
+                <!-- /components -->
+
+                <!-- Layout -->
+                <li class="nav-item-header">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Layout</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-layout"></i>
+                        <span>Page layouts</span>
+                    </a>
+
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="layout_static.html" class="nav-link">Static layout</a></li>
+                        <li class="nav-item"><a href="layout_no_header.html" class="nav-link">No header</a></li>
+                        <li class="nav-item"><a href="layout_no_footer.html" class="nav-link">No footer</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="layout_fixed_header.html" class="nav-link">Fixed header</a></li>
+                        <li class="nav-item"><a href="layout_fixed_footer.html" class="nav-link">Fixed footer</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="layout_2_sidebars_1_side.html" class="nav-link">2 sidebars on 1 side</a></li>
+                        <li class="nav-item"><a href="layout_2_sidebars_2_sides.html" class="nav-link">2 sidebars on 2 sides</a></li>
+                        <li class="nav-item"><a href="layout_3_sidebars.html" class="nav-link">3 sidebars</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="layout_boxed_page.html" class="nav-link">Boxed page</a></li>
+                        <li class="nav-item"><a href="layout_boxed_content.html" class="nav-link">Boxed content</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-columns"></i>
+                        <span>Sidebars</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Main sidebar</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="sidebar_default_resizable.html" class="nav-link">Resizable</a></li>
+                                <li class="nav-item"><a href="sidebar_default_resized.html" class="nav-link">Resized</a></li>
+                                <li class="nav-item"><a href="sidebar_default_collapsible.html" class="nav-link">Collapsible</a></li>
+                                <li class="nav-item"><a href="sidebar_default_collapsed.html" class="nav-link">Collapsed</a></li>
+                                <li class="nav-item"><a href="sidebar_default_hideable.html" class="nav-link">Hideable</a></li>
+                                <li class="nav-item"><a href="sidebar_default_hidden.html" class="nav-link">Hidden</a></li>
+                                <li class="nav-item-divider"></li>
+                                <li class="nav-item"><a href="sidebar_default_color_light.html" class="nav-link">Light color</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Secondary sidebar</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="sidebar_secondary_collapsible.html" class="nav-link">Collapsible</a></li>
+                                <li class="nav-item"><a href="sidebar_secondary_collapsed.html" class="nav-link">Collapsed</a></li>
+                                <li class="nav-item"><a href="sidebar_secondary_hideable.html" class="nav-link">Hideable</a></li>
+                                <li class="nav-item"><a href="sidebar_secondary_hidden.html" class="nav-link">Hidden</a></li>
+                                <li class="nav-item-divider"></li>
+                                <li class="nav-item"><a href="sidebar_secondary_color_dark.html" class="nav-link">Dark color</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Right sidebar</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="sidebar_right_collapsible.html" class="nav-link">Collapsible</a></li>
+                                <li class="nav-item"><a href="sidebar_right_collapsed.html" class="nav-link">Collapsed</a></li>
+                                <li class="nav-item"><a href="sidebar_right_hideable.html" class="nav-link">Hideable</a></li>
+                                <li class="nav-item"><a href="sidebar_right_hidden.html" class="nav-link">Hidden</a></li>
+                                <li class="nav-item-divider"></li>
+                                <li class="nav-item"><a href="sidebar_right_color_dark.html" class="nav-link">Dark color</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Content sidebar</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="sidebar_content_left.html" class="nav-link">Left aligned</a></li>
+                                <li class="nav-item"><a href="sidebar_content_left_stretch.html" class="nav-link">Left stretched</a></li>
+                                <li class="nav-item"><a href="sidebar_content_left_sections.html" class="nav-link">Left sectioned</a></li>
+                                <li class="nav-item"><a href="sidebar_content_right.html" class="nav-link">Right aligned</a></li>
+                                <li class="nav-item"><a href="sidebar_content_right_stretch.html" class="nav-link">Right stretched</a></li>
+                                <li class="nav-item"><a href="sidebar_content_right_sections.html" class="nav-link">Right sectioned</a></li>
+                                <li class="nav-item-divider"></li>
+                                <li class="nav-item"><a href="sidebar_content_color_dark.html" class="nav-link">Dark color</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Sticky areas</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="sidebar_sticky_header.html" class="nav-link">Header</a></li>
+                                <li class="nav-item"><a href="sidebar_sticky_footer.html" class="nav-link">Footer</a></li>
+                                <li class="nav-item"><a href="sidebar_sticky_header_footer.html" class="nav-link">Header and footer</a></li>
+                                <li class="nav-item"><a href="sidebar_sticky_custom.html" class="nav-link">Custom elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="sidebar_components.html" class="nav-link">Sidebar components</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-rows"></i>
+                        <span>Navbars</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Single navbar</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="navbar_single_bottom_fixed.html" class="nav-link">Bottom fixed</a></li>
+                                <li class="nav-item"><a href="navbar_single_header_before.html" class="nav-link">Before page header</a></li>
+                                <li class="nav-item"><a href="navbar_single_header_before_fixed.html" class="nav-link">Before page header fixed</a></li>
+                                <li class="nav-item"><a href="navbar_single_header_after.html" class="nav-link">After page header</a></li>
+                                <li class="nav-item"><a href="navbar_single_header_after_sticky.html" class="nav-link">After page header sticky</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Multiple navbars</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="navbar_multiple_top.html" class="nav-link">Multiple top</a></li>
+                                <li class="nav-item"><a href="navbar_multiple_bottom_static.html" class="nav-link">Multiple bottom static</a></li>
+                                <li class="nav-item"><a href="navbar_multiple_bottom_fixed.html" class="nav-link">Multiple bottom fixed</a></li>
+                                <li class="nav-item"><a href="navbar_multiple_top_bottom_fixed.html" class="nav-link">Top and bottom fixed</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Content navbar</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="navbar_component_single.html" class="nav-link">Single navbar</a></li>
+                                <li class="nav-item"><a href="navbar_component_multiple.html" class="nav-link">Multiple navbars</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="navbar_colors.html" class="nav-link">Color options</a></li>
+                        <li class="nav-item"><a href="navbar_sizes.html" class="nav-link">Sizing options</a></li>
+                        <li class="nav-item"><a href="navbar_components.html" class="nav-link">Navbar components</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-arrow-fat-lines-down"></i>
+                        <span>Vertical navigation</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="navigation_vertical_styles.html" class="nav-link">Navigation styles</a></li>
+                        <li class="nav-item"><a href="navigation_vertical_collapsible.html" class="nav-link">Collapsible menu</a></li>
+                        <li class="nav-item"><a href="navigation_vertical_accordion.html" class="nav-link">Accordion menu</a></li>
+                        <li class="nav-item"><a href="navigation_vertical_bordered.html" class="nav-link">Bordered navigation</a></li>
+                        <li class="nav-item"><a href="navigation_vertical_right_icons.html" class="nav-link">Right icons</a></li>
+                        <li class="nav-item"><a href="navigation_vertical_badges.html" class="nav-link">Badges</a></li>
+                        <li class="nav-item"><a href="navigation_vertical_disabled.html" class="nav-link">Disabled items</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-arrow-fat-lines-right"></i>
+                        <span>Horizontal navigation</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="navigation_horizontal_styles.html" class="nav-link">Navigation styles</a></li>
+                        <li class="nav-item"><a href="navigation_horizontal_elements.html" class="nav-link">Navigation elements</a></li>
+                        <li class="nav-item"><a href="navigation_horizontal_tabs.html" class="nav-link">Tabbed navigation</a></li>
+                        <li class="nav-item"><a href="navigation_horizontal_disabled.html" class="nav-link">Disabled navigation links</a></li>
+                        <li class="nav-item"><a href="navigation_horizontal_mega.html" class="nav-link">Horizontal mega menu</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="ph-arrow-elbow-down-right"></i> <span>Menu levels</span></a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="#" class="nav-link">Second level</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Second level with child</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="#" class="nav-link">Third level</a></li>
+                                <li class="nav-item nav-item-submenu">
+                                    <a href="#" class="nav-link">Third level with child</a>
+                                    <ul class="nav-group-sub collapse">
+                                        <li class="nav-item"><a href="#" class="nav-link">Fourth level</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Fourth level</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link">Third level</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Second level</a></li>
+                    </ul>
+                </li>
+                <!-- /layout -->
+
+                <!-- Data visualization -->
+                <li class="nav-item-header">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Data visualization</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-chart-line"></i>
+                        <span>Echarts library</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="echarts_lines.html" class="nav-link">Line charts</a></li>
+                        <li class="nav-item"><a href="echarts_areas.html" class="nav-link">Area charts</a></li>
+                        <li class="nav-item"><a href="echarts_columns_waterfalls.html" class="nav-link">Columns and waterfalls</a></li>
+                        <li class="nav-item"><a href="echarts_bars_tornados.html" class="nav-link">Bars and tornados</a></li>
+                        <li class="nav-item"><a href="echarts_scatter.html" class="nav-link">Scatter charts</a></li>
+                        <li class="nav-item"><a href="echarts_pies_donuts.html" class="nav-link">Pies and donuts</a></li>
+                        <li class="nav-item"><a href="echarts_funnels_calendars.html" class="nav-link">Funnels and calendars</a></li>
+                        <li class="nav-item"><a href="echarts_candlesticks_others.html" class="nav-link">Candlesticks and others</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-chart-bar"></i>
+                        <span>D3 library</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="d3_lines_basic.html" class="nav-link">Simple lines</a></li>
+                        <li class="nav-item"><a href="d3_lines_advanced.html" class="nav-link">Advanced lines</a></li>
+                        <li class="nav-item"><a href="d3_bars_basic.html" class="nav-link">Simple bars</a></li>
+                        <li class="nav-item"><a href="d3_bars_advanced.html" class="nav-link">Advanced bars</a></li>
+                        <li class="nav-item"><a href="d3_pies.html" class="nav-link">Pie charts</a></li>
+                        <li class="nav-item"><a href="d3_circle_diagrams.html" class="nav-link">Circle diagrams</a></li>
+                        <li class="nav-item"><a href="d3_tree.html" class="nav-link">Tree layout</a></li>
+                        <li class="nav-item"><a href="d3_other.html" class="nav-link">Other charts</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-chart-pie-slice"></i>
+                        <span>C3 library</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="c3_lines_areas.html" class="nav-link">Lines and areas</a></li>
+                        <li class="nav-item"><a href="c3_bars_pies.html" class="nav-link">Bars and pies</a></li>
+                        <li class="nav-item"><a href="c3_advanced.html" class="nav-link">Advanced examples</a></li>
+                        <li class="nav-item"><a href="c3_axis.html" class="nav-link">Chart axis</a></li>
+                        <li class="nav-item"><a href="c3_grid.html" class="nav-link">Grid options</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-google-logo"></i>
+                        <span>Google charts</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="google_lines.html" class="nav-link">Line charts</a></li>
+                        <li class="nav-item"><a href="google_bars.html" class="nav-link">Bar charts</a></li>
+                        <li class="nav-item"><a href="google_pies.html" class="nav-link">Pie charts</a></li>
+                        <li class="nav-item"><a href="google_scatter_bubble.html" class="nav-link">Bubble &amp; scatter charts</a></li>
+                        <li class="nav-item"><a href="google_other.html" class="nav-link">Other charts</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-map-pin"></i>
+                        <span>Maps integration</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="maps_leaflet.html" class="nav-link">Leaflet maps</a></li>
+                        <li class="nav-item"><a href="maps_echarts.html" class="nav-link">ECharts maps</a></li>
+                        <li class="nav-item"><a href="maps_vector.html" class="nav-link disabled">D3.js maps <span class="badge bg-transparent align-self-center ms-auto">Coming soon</span></a></li>
+                    </ul>
+                </li>
+                <!-- /data visualization -->
+
+                <!-- Extensions -->
+                <li class="nav-item-header">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Extensions</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-circles-three"></i>
+                        <span>Extensions</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="extension_image_cropper.html" class="nav-link">Image cropper</a></li>
+                        <li class="nav-item"><a href="extension_mark.html" class="nav-link">Mark</a></li>
+                        <li class="nav-item"><a href="extension_dnd.html" class="nav-link">Drag and drop</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-cloud-arrow-up"></i>
+                        <span>File uploaders</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="uploader_plupload.html" class="nav-link">Plupload</a></li>
+                        <li class="nav-item"><a href="uploader_bootstrap.html" class="nav-link">Bootstrap file uploader</a></li>
+                        <li class="nav-item"><a href="uploader_dropzone.html" class="nav-link">Dropzone</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-calendar-check"></i>
+                        <span>Event calendars</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="fullcalendar_views.html" class="nav-link">Basic views</a></li>
+                        <li class="nav-item"><a href="fullcalendar_styling.html" class="nav-link">Event styling</a></li>
+                        <li class="nav-item"><a href="fullcalendar_formats.html" class="nav-link">Language and time</a></li>
+                        <li class="nav-item"><a href="fullcalendar_advanced.html" class="nav-link">Advanced usage</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-globe"></i>
+                        <span>Internationalization</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="internationalization_switch_direct.html" class="nav-link">Direct translation</a></li>
+                        <li class="nav-item"><a href="internationalization_switch_query.html" class="nav-link">Querystring parameter</a></li>
+                        <li class="nav-item"><a href="internationalization_fallback.html" class="nav-link">Language fallback</a></li>
+                        <li class="nav-item"><a href="internationalization_callbacks.html" class="nav-link">Callbacks</a></li>
+                    </ul>
+                </li>
+                <!-- /extensions -->
+
+                <!-- Tables -->
+                <li class="nav-item-header">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Tables</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-table"></i>
+                        <span>Basic tables</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="table_basic.html" class="nav-link">Basic examples</a></li>
+                        <li class="nav-item"><a href="table_sizing.html" class="nav-link">Table sizing</a></li>
+                        <li class="nav-item"><a href="table_borders.html" class="nav-link">Table borders</a></li>
+                        <li class="nav-item"><a href="table_styling.html" class="nav-link">Table styling</a></li>
+                        <li class="nav-item"><a href="table_elements.html" class="nav-link">Table elements</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-square-half-bottom"></i>
+                        <span>Grid.js tables</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="gridjs_basic.html" class="nav-link">Basic</a></li>
+                        <li class="nav-item"><a href="gridjs_data_source.html" class="nav-link">Data source</a></li>
+                        <li class="nav-item"><a href="gridjs_server_side.html" class="nav-link">Server side</a></li>
+                        <li class="nav-item"><a href="gridjs_customizing.html" class="nav-link">Customizing</a></li>
+                        <li class="nav-item"><a href="gridjs_advanced.html" class="nav-link">Advanced</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-square-half"></i>
+                        <span>Data tables</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="datatable_basic.html" class="nav-link">Basic initialization</a></li>
+                        <li class="nav-item"><a href="datatable_styling.html" class="nav-link">Basic styling</a></li>
+                        <li class="nav-item"><a href="datatable_advanced.html" class="nav-link">Advanced examples</a></li>
+                        <li class="nav-item"><a href="datatable_sorting.html" class="nav-link">Sorting options</a></li>
+                        <li class="nav-item"><a href="datatable_api.html" class="nav-link">Using API</a></li>
+                        <li class="nav-item"><a href="datatable_data_sources.html" class="nav-link">Data sources</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-puzzle-piece"></i>
+                        <span>Data tables extensions</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="datatable_extension_reorder.html" class="nav-link">Columns reorder</a></li>
+                        <li class="nav-item"><a href="datatable_extension_row_reorder.html" class="nav-link">Row reorder</a></li>
+                        <li class="nav-item"><a href="datatable_extension_fixed_columns.html" class="nav-link">Fixed columns</a></li>
+                        <li class="nav-item"><a href="datatable_extension_autofill.html" class="nav-link">Auto fill</a></li>
+                        <li class="nav-item"><a href="datatable_extension_key_table.html" class="nav-link">Key table</a></li>
+                        <li class="nav-item"><a href="datatable_extension_scroller.html" class="nav-link">Scroller</a></li>
+                        <li class="nav-item"><a href="datatable_extension_select.html" class="nav-link">Select</a></li>
+                        <li class="nav-item"><a href="datatable_extension_responsive.html" class="nav-link">Responsive</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Buttons</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="datatable_extension_buttons_init.html" class="nav-link">Initialization</a></li>
+                                <li class="nav-item"><a href="datatable_extension_buttons_pdf.html" class="nav-link">PDF buttons</a></li>
+                                <li class="nav-item"><a href="datatable_extension_buttons_excel.html" class="nav-link">Excel buttons</a></li>
+                                <li class="nav-item"><a href="datatable_extension_buttons_print.html" class="nav-link">Print buttons</a></li>
+                                <li class="nav-item"><a href="datatable_extension_buttons_html5.html" class="nav-link">HTML5 buttons</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="datatable_extension_colvis.html" class="nav-link">Columns visibility</a></li>
+                    </ul>
+                </li>
+                <!-- /tables -->
+
+                <!-- Page kits -->
+                <li class="nav-item-header">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Page kits</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-cards"></i>
+                        <span>General pages</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="general_feed.html" class="nav-link">Feed</a></li>
+                        <li class="nav-item"><a href="general_embeds.html" class="nav-link">Embeds</a></li>
+                        <li class="nav-item"><a href="general_faq.html" class="nav-link">FAQ page</a></li>
+                        <li class="nav-item"><a href="general_knowledgebase.html" class="nav-link">Knowledgebase</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Blog</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="blog_classic_v.html" class="nav-link">Classic vertical</a></li>
+                                <li class="nav-item"><a href="blog_classic_h.html" class="nav-link">Classic horizontal</a></li>
+                                <li class="nav-item"><a href="blog_grid.html" class="nav-link">Grid</a></li>
+                                <li class="nav-item"><a href="blog_single.html" class="nav-link">Single post</a></li>
+                                <li class="nav-item-divider"></li>
+                                <li class="nav-item"><a href="blog_sidebar_left.html" class="nav-link">Left sidebar</a></li>
+                                <li class="nav-item"><a href="blog_sidebar_right.html" class="nav-link">Right sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Timelines</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="timelines_left.html" class="nav-link">Left timeline</a></li>
+                                <li class="nav-item"><a href="timelines_right.html" class="nav-link">Right timeline</a></li>
+                                <li class="nav-item"><a href="timelines_center.html" class="nav-link">Centered timeline</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Gallery</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="gallery_grid.html" class="nav-link">Media grid</a></li>
+                                <li class="nav-item"><a href="gallery_titles.html" class="nav-link">Media with titles</a></li>
+                                <li class="nav-item"><a href="gallery_description.html" class="nav-link">Media with description</a></li>
+                                <li class="nav-item"><a href="gallery_library.html" class="nav-link">Media library</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-wrench"></i>
+                        <span>Service pages</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="service_sitemap.html" class="nav-link">Sitemap</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Invoicing</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="invoice_template.html" class="nav-link">Invoice template</a></li>
+                                <li class="nav-item"><a href="invoice_grid.html" class="nav-link">Invoice grid</a></li>
+                                <li class="nav-item"><a href="invoice_archive.html" class="nav-link">Invoice archive</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Authentication</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="login_simple.html" class="nav-link">Simple login</a></li>
+                                <li class="nav-item"><a href="login_advanced.html" class="nav-link">More login info</a></li>
+                                <li class="nav-item"><a href="login_registration.html" class="nav-link">Simple registration</a></li>
+                                <li class="nav-item"><a href="login_registration_advanced.html" class="nav-link">More registration info</a></li>
+                                <li class="nav-item"><a href="login_unlock.html" class="nav-link">Unlock user</a></li>
+                                <li class="nav-item"><a href="login_password_recover.html" class="nav-link">Reset password</a></li>
+                                <li class="nav-item"><a href="login_hide_navbar.html" class="nav-link">Hide navbar</a></li>
+                                <li class="nav-item"><a href="login_transparent.html" class="nav-link">Transparent box</a></li>
+                                <li class="nav-item"><a href="login_background.html" class="nav-link">Background option</a></li>
+                                <li class="nav-item"><a href="login_validation.html" class="nav-link">With validation</a></li>
+                                <li class="nav-item"><a href="login_tabbed.html" class="nav-link">Tabbed form</a></li>
+                                <li class="nav-item"><a href="login_modals.html" class="nav-link">Inside modals</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Error pages</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="error_403.html" class="nav-link">Error 403</a></li>
+                                <li class="nav-item"><a href="error_404.html" class="nav-link">Error 404</a></li>
+                                <li class="nav-item"><a href="error_405.html" class="nav-link">Error 405</a></li>
+                                <li class="nav-item"><a href="error_500.html" class="nav-link">Error 500</a></li>
+                                <li class="nav-item"><a href="error_503.html" class="nav-link">Error 503</a></li>
+                                <li class="nav-item"><a href="error_offline.html" class="nav-link">Offline page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-user-focus"></i>
+                        <span>User pages</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="user_pages_list.html" class="nav-link">User list</a></li>
+                        <li class="nav-item"><a href="user_pages_cards.html" class="nav-link">User cards</a></li>
+                        <li class="nav-item"><a href="user_pages_profile.html" class="nav-link">Simple profile</a></li>
+                        <li class="nav-item"><a href="user_pages_profile_tabbed.html" class="nav-link">Tabbed profile</a></li>
+                        <li class="nav-item"><a href="user_pages_profile_cover.html" class="nav-link">Profile with cover</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-circles-four"></i>
+                        <span>Application pages</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Task manager</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="task_manager_grid.html" class="nav-link">Task grid</a></li>
+                                <li class="nav-item"><a href="task_manager_list.html" class="nav-link">Task list</a></li>
+                                <li class="nav-item"><a href="task_manager_detailed.html" class="nav-link">Task detailed</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Inbox</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="mail_list.html" class="nav-link">Mail list</a></li>
+                                <li class="nav-item"><a href="mail_list_detached.html" class="nav-link">Mail list (detached)</a></li>
+                                <li class="nav-item"><a href="mail_read.html" class="nav-link">Read mail</a></li>
+                                <li class="nav-item"><a href="mail_write.html" class="nav-link">Write mail</a></li>
+                                <li class="nav-item-divider"></li>
+                                <li class="nav-item"><a href="chat_layouts.html" class="nav-link">Chat layouts</a></li>
+                                <li class="nav-item"><a href="chat_options.html" class="nav-link">Chat options</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Search</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="search_basic.html" class="nav-link">Basic search results</a></li>
+                                <li class="nav-item"><a href="search_users.html" class="nav-link">User search results</a></li>
+                                <li class="nav-item"><a href="search_images.html" class="nav-link">Image search results</a></li>
+                                <li class="nav-item"><a href="search_videos.html" class="nav-link">Video search results</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Job search</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="job_list_cards.html" class="nav-link">Cards view</a></li>
+                                <li class="nav-item"><a href="job_list_list.html" class="nav-link">List view</a></li>
+                                <li class="nav-item"><a href="job_detailed.html" class="nav-link">Job detailed</a></li>
+                                <li class="nav-item"><a href="job_apply.html" class="nav-link">Apply</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Learning</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="learning_list.html" class="nav-link">List view</a></li>
+                                <li class="nav-item"><a href="learning_grid.html" class="nav-link">Grid view</a></li>
+                                <li class="nav-item"><a href="learning_detailed.html" class="nav-link">Detailed course</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Ecommerce set</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="ecommerce_product_list.html" class="nav-link">Product list</a></li>
+                                <li class="nav-item"><a href="ecommerce_product_grid.html" class="nav-link">Product grid</a></li>
+                                <li class="nav-item"><a href="ecommerce_orders_history.html" class="nav-link">Orders history</a></li>
+                                <li class="nav-item"><a href="ecommerce_customers.html" class="nav-link">Customers</a></li>
+                                <li class="nav-item"><a href="ecommerce_pricing.html" class="nav-link">Pricing tables</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-gift"></i>
+                        <span>Widgets</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="widgets_content.html" class="nav-link">Content widgets</a></li>
+                        <li class="nav-item"><a href="widgets_stats.html" class="nav-link">Statistics widgets</a></li>
+                        <li class="nav-item"><a href="widgets_menu.html" class="nav-link disabled">Menu widgets <span class="badge bg-transparent align-self-center ms-auto">Coming soon</span></a></li>
+                        <li class="nav-item"><a href="widgets_form.html" class="nav-link disabled">Form widgets <span class="badge bg-transparent align-self-center ms-auto">Coming soon</span></a></li>
+                    </ul>
+                </li>
+                <!-- /page kits -->
+
+            </ul>
+        </div>
+    </div>
+</div>

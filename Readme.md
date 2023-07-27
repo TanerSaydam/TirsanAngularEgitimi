@@ -34,6 +34,16 @@
 6) Pipe Kullanımı Anlatıldı ve Örnek Kullanımı Yapıldı
 7) Pagination Yapısı ve Önemi Anlatıldı Proje Üzerinde Örneklendirildi
 
+# 4.Ders İşlenen Konular
+1) JWT Oluşturma
+2) Identity Kütüphanesi
+3) Refresh Token Oluşturma
+4) Angular'a Tema Giydirme
+5) Login ve Authorize İşlemi
+6) Token Decode & Token Kontrolü
+7) Refresh Token'ın Doğru Kullanım Yöntemi
+8) Generic Http Service
+9) Token'ı Api İsteğine Ekleme
 
 
 
