@@ -5,5 +5,5 @@ namespace ExampleWebApi.Services;
 
 public interface IJwtProvider
 {
-    Task<LoginResponseDto> CreateToken(AppUser user);
+    Task<LoginResponseDto> CreateToken(AppUser user, bool rememberMe);
 }

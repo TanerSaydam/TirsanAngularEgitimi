@@ -22,6 +22,42 @@ namespace ExampleWebApi.Controllers
         }
 
         [HttpPost("[action]")]
+        public async Task<IActionResult> Register(RegisterDto request, CancellationToken cancellationToken)
+        {
+            string userName = request.UserName.ToLower().Trim().Replace(" ", "");
+
+            AppUser user = await _userManager.FindByEmailAsync(request.Email);
+            if(user != null)
+            {
+                throw new Exception("Bu mail adresi daha önce kullanılmış!");
+            }
+            user = await _userManager.FindByNameAsync(userName);
+            if(user != null)
+            {
+                throw new Exception("Bu kullanıcı adı daha önce kullanılmış!");
+            }
+
+            user = new AppUser()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = userName,
+                Email = request.Email,
+                NameLastName = request.Name
+            };
+
+            IdentityResult result = await _userManager.CreateAsync(user, request.Password);
+            if (result.Succeeded)
+            {
+                LoginResponseDto response = await _jwtProvider.CreateToken(user, false);
+                return Ok(response);
+            }
+            else
+            {
+                throw new Exception(result.Errors.First().Description);
+            }
+        }
+
+        [HttpPost("[action]")]
         public async Task<IActionResult> Login(LoginDto request)
         {
             AppUser user = await _userManager.FindByEmailAsync(request.EmailOrUserName);
@@ -35,7 +71,7 @@ namespace ExampleWebApi.Controllers
             bool result = await _userManager.CheckPasswordAsync(user, request.Password);
             if (result)
             {
-                LoginResponseDto response = await _jwtProvider.CreateToken(user);
+                LoginResponseDto response = await _jwtProvider.CreateToken(user,request.RememberMe);
                 return Ok(response);
             }
             else
@@ -48,7 +84,7 @@ namespace ExampleWebApi.Controllers
             AppUser user = await _userManager.Users.Where(p => p.RefreshToken == request.RefreshToken).FirstOrDefaultAsync();
             if(user == null)
                 throw new UnauthorizedAccessException("Kullanıcı bulunamadı!");
-            LoginResponseDto response = await _jwtProvider.CreateToken(user);
+            LoginResponseDto response = await _jwtProvider.CreateToken(user,false);
             return Ok(response);
         }
     }

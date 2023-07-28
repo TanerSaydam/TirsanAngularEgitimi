@@ -45,6 +45,14 @@
 8) Generic Http Service
 9) Token'ı Api İsteğine Ekleme
 
-
+# 5.Ders İşlenen Konular
+1) Tema Giydirme
+2) Login / Register Sayfa Tasarımı
+3) Validate Directive
+4) Generic Http Service
+5) Sweet Alert Service (Toast, Swal)
+6) Responsive Css Kodlama
+7) Tema Renk Değiştirme
+8) Lock Ekranı
 
 

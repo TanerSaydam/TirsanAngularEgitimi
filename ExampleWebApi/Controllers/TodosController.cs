@@ -3,6 +3,7 @@ using ExampleWebApi.Context;
 using ExampleWebApi.Dtos;
 using ExampleWebApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExampleWebApi.Controllers;
 
@@ -30,6 +31,17 @@ public sealed class TodosController : ControllerBase
             .Where(p=> p.Work.ToLower().Contains(request.Search.ToLower()))
             .OrderByDescending(p=> p.CreatedDate)
             .ToPagedListAsync(request.PageNumber, request.PageSize, cancellationToken);
+
+        return Ok(result);
+    }
+
+    [HttpGet("[action]")]
+    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+    {
+        IList<Todo> result = await _context.Set<Todo>()
+            .AsNoTracking()
+            .Take(100)
+            .ToListAsync(cancellationToken);
 
         return Ok(result);
     }

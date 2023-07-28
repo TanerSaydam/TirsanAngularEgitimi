@@ -1,0 +1,154 @@
+<div class="page-content">
+    <div class="content-wrapper">
+        <div class="content-inner">
+            <div class="content d-flex justify-content-center align-items-center">
+
+                <!-- Registration form -->
+                <form #form="ngForm" class="flex-fill" (ngSubmit)="signUp(form)">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-2">
+                            <div class="card mb-0">
+                                <div class="card-body">
+                                    <div class="text-center mb-3">
+                                        <div class="d-inline-flex align-items-center justify-content-center mb-4 mt-2">
+                                            <img src="assets/images/logo_icon.svg" class="h-48px" alt="">
+                                        </div>
+                                        <h5 class="mb-0">Create account</h5>
+                                        <span class="d-block text-muted">All fields are required</span>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Username</label>
+                                        <div class="form-control-feedback form-control-feedback-start">
+                                            <input [appValidate]="userName.validity.valid" ngModel #userName
+                                                name="userName" required minlength="3" type="text" class="form-control"
+                                                placeholder="JohnDoe">
+                                            <div class="form-control-feedback-icon">
+                                                <i class="ph-user-circle text-muted"></i>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Validation error!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Name And Last Name</label>
+                                        <div class="form-control-feedback form-control-feedback-start">
+                                            <input [appValidate]="name.validity.valid" ngModel #name name="name"
+                                                required minlength="3" type="text" class="form-control"
+                                                placeholder="John">
+                                            <div class="form-control-feedback-icon">
+                                                <i class="ph-user-circle-plus text-muted"></i>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Validation error!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Create password</label>
+                                                <div class="form-control-feedback form-control-feedback-start">
+                                                    <input (keyup)="checkPassword(password,repeatPassword)" [appValidate]="password.validity.valid" ngModel #password
+                                                        name="password" required type="password" class="form-control"
+                                                        placeholder="•••••••••••">
+                                                    <div class="form-control-feedback-icon">
+                                                        <i class="ph-lock text-muted"></i>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Şifreler eşlemiyor!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Repeat password</label>
+                                                <div class="form-control-feedback form-control-feedback-start">
+                                                    <input (keyup)="checkPassword(password,repeatPassword)" [appValidate]="repeatPassword.validity.valid" ngModel
+                                                        #repeatPassword name="repeatPassword" required type="password"
+                                                        class="form-control" placeholder="•••••••••••">
+                                                    <div class="form-control-feedback-icon">
+                                                        <i class="ph-lock text-muted"></i>
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Şifreler eşlemiyor!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Your email</label>
+                                        <div class="form-control-feedback form-control-feedback-start">
+                                            <input [appValidate]="email.validity.valid" ngModel #email name="email"
+                                                required email type="email" class="form-control"
+                                                placeholder="john@doe.com">
+                                            <div class="form-control-feedback-icon">
+                                                <i class="ph-at text-muted"></i>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Validation error!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-check">
+                                            <input [(ngModel)]="termOfService" type="checkbox" name="termOfService" class="form-check-input">
+                                            <span data-bs-toggle="modal" data-bs-target="#term-modal" class="form-check-label">
+                                                Accept <a style="font-weight: bold;">terms of service</a>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="card-body border-top">
+                                    <a routerLink="/login">Already have a acount? Sign In</a>
+                                    <button [disabled]="!form.valid || !isPasswordMatch || !termOfService" type="submit" class="btn btn-primary" style="float: right;">
+                                        <i class="ph-plus me-2"></i>
+                                        Create account
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- /registration form -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="term-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Term of Service</h1>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint at natus odio enim illum a
+                    reprehenderit quasi ad aperiam, amet dolor dignissimos maiores, doloremque ullam nulla eius
+                    excepturi quia odit!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint at natus odio enim illum a
+                    reprehenderit quasi ad aperiam, amet dolor dignissimos maiores, doloremque ullam nulla eius
+                    excepturi quia odit!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint at natus odio enim illum a
+                    reprehenderit quasi ad aperiam, amet dolor dignissimos maiores, doloremque ullam nulla eius
+                    excepturi quia odit!</p>
+                <button class="btn btn-danger w-100" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-x"></i>
+                    <span class="ms-1">Close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

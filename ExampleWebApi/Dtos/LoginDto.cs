@@ -2,4 +2,5 @@
 
 public sealed record LoginDto(
     string EmailOrUserName,
-    string Password);
+    string Password,
+    bool RememberMe = false);

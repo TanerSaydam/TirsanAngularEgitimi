@@ -21,16 +21,17 @@ public sealed class JwtProvider : IJwtProvider
         _userManager = userManager;
     }
 
-    public async Task<LoginResponseDto> CreateToken(AppUser user)
+    public async Task<LoginResponseDto> CreateToken(AppUser user, bool rememberMe)
     {
         var claims = new Claim[]
         {
-            new Claim(ClaimTypes.Name, user.NameLastName),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.NameIdentifier, user.Id)
+            new Claim("name", user.NameLastName),
+            new Claim("email", user.Email),
+            new Claim("id", user.Id)
         };
 
-        DateTime expires = DateTime.Now.AddDays(1);
+        DateTime expires = DateTime.Now.AddSeconds(10);
+        //if(rememberMe) expires = expires.AddMonths(1);
 
         JwtSecurityToken jwtSecurityToken = new(
             issuer: _jwtOptions.Issuer,

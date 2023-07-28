@@ -1,0 +1,43 @@
+@import url("/node_modules/ngx-toastr/toastr.css");
+
+body{
+    overflow: auto !important;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+
+.page-content{
+    margin-top: 63px;
+}
+
+.content-wrapper{
+    margin-left: 300px;
+}
+
+.sidebar-expand-lg{
+    position: fixed;
+    left: auto;
+    margin-top: 63px;
+}
+
+.sidebar-main-resized{
+    position: fixed;
+    margin-top: 0;
+}
+
+a{
+    cursor: pointer;
+}
+
+@media screen and (max-width:990px) {
+    .sidebar-expand-lg{
+        left: -100%;
+    }
+
+    .content-wrapper{
+        margin-left: 0;
+    }
+}
