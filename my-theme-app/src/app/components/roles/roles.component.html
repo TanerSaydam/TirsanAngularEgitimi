@@ -1,0 +1,81 @@
+<app-blank
+  [title]=title
+  [routes]="routes"
+  [settings]="settings">
+
+    <app-card>
+        <button class="btn btn-primary header btn-sm">
+            <i class="ph-plus"></i>
+        </button>
+        <div class="table-responsive" style="min-height: 40vh;">
+            <table class="table text-nowrap">
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Client</th>
+                        <th>Changes</th>
+                        <th>Budget</th>
+                        <th>Status</th>
+                        <th class="text-center" style="width: 20px;">
+                            <i class="ph-dots-three"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light">
+                        <td colspan="5">Today</td>
+                        <td class="text-end">
+                            <span class="progress-meter" id="today-progress" data-progress="30"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="d-block me-3">
+                                    <img src="assets/images/brands/facebook.svg" class="rounded-circle" width="36" height="36" alt="">
+                                </a>
+                                <div>
+                                    <a href="#" class="text-body fw-semibold">Facebook</a>
+                                    <div class="text-muted fs-sm">
+                                        <span class="d-inline-block bg-primary rounded-pill p-1 me-1"></span>
+                                        02:00 - 03:00
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="text-muted">Mintlime</span></td>
+                        <td><span class="text-success"><i class="ph-trend-up me-2"></i> 2.43%</span></td>
+                        <td><h6 class="mb-0">$5,489</h6></td>
+                        <td><span class="badge bg-primary bg-opacity-10 text-primary">Active</span></td>
+                        <td class="text-center">
+                            <div class="dropdown">
+                                <a href="#" class="text-body" data-bs-toggle="dropdown">
+                                    <i class="ph-list"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ph-chart-line me-2"></i>
+                                        View statement
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ph-pencil me-2"></i>
+                                        Edit campaign
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ph-lock-key me-2"></i>
+                                        Disable campaign
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ph-gear me-2"></i>
+                                        Settings
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </app-card>
+</app-blank>

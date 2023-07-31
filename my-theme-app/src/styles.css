@@ -32,6 +32,12 @@ a{
     cursor: pointer;
 }
 
+.table-img{
+    border: 1px solid; 
+    padding: 2px; 
+    border-color: #ccc;
+}
+
 @media screen and (max-width:990px) {
     .sidebar-expand-lg{
         left: -100%;

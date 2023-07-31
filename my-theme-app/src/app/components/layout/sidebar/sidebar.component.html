@@ -1,0 +1,110 @@
+<div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg">
+    <div class="sidebar-content">
+
+        <!-- Sidebar header -->
+        <div class="sidebar-section">
+            <div class="sidebar-section-body d-flex justify-content-center">
+                <h5 class="sidebar-resize-hide flex-grow-1 my-auto">Menu</h5>
+
+                <div>
+                    <button type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-control sidebar-main-resize d-none d-lg-inline-flex">
+                        <i class="ph-arrows-left-right"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-mobile-main-toggle d-lg-none">
+                        <i class="ph-x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- /sidebar header -->
+
+
+        <!-- Main navigation -->
+        <div class="sidebar-section">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">             
+                <li class="nav-item-header pt-0">
+                    <div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Main</div>
+                    <i class="ph-dots-three sidebar-resize-show"></i>
+                </li>
+                <li class="nav-item">
+                    <a
+                      routerLink="/"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{exact:true}"
+                      class="nav-link">
+                        <i class="ph-house"></i>
+                        <span>
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                      routerLink="/products"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{exact:true}"
+                      class="nav-link">
+                        <i class="ph-codesandbox-logo"></i>
+                        <span>
+                            Products
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                      routerLink="/roles"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{exact:true}"
+                      class="nav-link">
+                        <i class="ph-check-square"></i>
+                        <span>
+                            Roles
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link">
+                        <i class="ph-cards"></i>
+                        <span>General pages</span>
+                    </a>
+                    <ul class="nav-group-sub collapse">
+                        <li class="nav-item"><a href="general_feed.html" class="nav-link">Feed</a></li>
+                        <li class="nav-item"><a href="general_embeds.html" class="nav-link">Embeds</a></li>
+                        <li class="nav-item"><a href="general_faq.html" class="nav-link">FAQ page</a></li>
+                        <li class="nav-item"><a href="general_knowledgebase.html" class="nav-link">Knowledgebase</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Blog</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="blog_classic_v.html" class="nav-link">Classic vertical</a></li>
+                                <li class="nav-item"><a href="blog_classic_h.html" class="nav-link">Classic horizontal</a></li>
+                                <li class="nav-item"><a href="blog_grid.html" class="nav-link">Grid</a></li>
+                                <li class="nav-item"><a href="blog_single.html" class="nav-link">Single post</a></li>
+                                <li class="nav-item-divider"></li>
+                                <li class="nav-item"><a href="blog_sidebar_left.html" class="nav-link">Left sidebar</a></li>
+                                <li class="nav-item"><a href="blog_sidebar_right.html" class="nav-link">Right sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Timelines</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="timelines_left.html" class="nav-link">Left timeline</a></li>
+                                <li class="nav-item"><a href="timelines_right.html" class="nav-link">Right timeline</a></li>
+                                <li class="nav-item"><a href="timelines_center.html" class="nav-link">Centered timeline</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Gallery</a>
+                            <ul class="nav-group-sub collapse">
+                                <li class="nav-item"><a href="gallery_grid.html" class="nav-link">Media grid</a></li>
+                                <li class="nav-item"><a href="gallery_titles.html" class="nav-link">Media with titles</a></li>
+                                <li class="nav-item"><a href="gallery_description.html" class="nav-link">Media with description</a></li>
+                                <li class="nav-item"><a href="gallery_library.html" class="nav-link">Media library</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

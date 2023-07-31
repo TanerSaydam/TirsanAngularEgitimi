@@ -55,4 +55,13 @@
 7) Tema Renk Değiştirme
 8) Lock Ekranı
 
+# 6.Ders İşlenen Konular
+1) Generic Component Oluşturma
+2) Generic Component İçinde Birden Farklı Yere Veri Gönderme
+3) Dosya'yı Api Ekleyerek Gönderme
+4) Backend'de Dosyayı Kaydetme
+5) Backend'de Dosya Silme İşlemi
+6) Token Kontrolü
+7) Apiye Token Ekleme
+
 

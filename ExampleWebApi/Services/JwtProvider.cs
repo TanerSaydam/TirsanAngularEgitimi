@@ -30,8 +30,8 @@ public sealed class JwtProvider : IJwtProvider
             new Claim("id", user.Id)
         };
 
-        DateTime expires = DateTime.Now.AddSeconds(10);
-        //if(rememberMe) expires = expires.AddMonths(1);
+        DateTime expires = DateTime.Now.AddDays(10);
+        if(rememberMe) expires = expires.AddMonths(1);
 
         JwtSecurityToken jwtSecurityToken = new(
             issuer: _jwtOptions.Issuer,

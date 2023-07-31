@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "xEqLJPVnM18v9wy2QewAFEa6p5VA8cXvXf8pvsJQ+ec=",
+  "Hash": "vBSnUDLQ3kYXjT9itS3CvDszHHKOuU/lDJkuu+ztI6k=",
   "Source": "ExampleWebApi",
   "BasePath": "_content/ExampleWebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ExampleWebApi\\wwwroot",
+      "Source": "ExampleWebApi",
+      "ContentRoot": "C:\\Tırsan Angular Eğitimi\\ExampleWebApi\\wwwroot\\",
+      "BasePath": "_content/ExampleWebApi",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

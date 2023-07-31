@@ -79,6 +79,18 @@ namespace ExampleWebApi.Controllers
         }
 
         [HttpPost("[action]")]
+        public async Task<IActionResult> LoginByRefreshToken(LoginByRefreshTokenDto request)
+        {
+            AppUser user = await _userManager.Users.Where(p=> p.RefreshToken == request.RefreshToken).FirstOrDefaultAsync();
+            if (user == null)
+            {
+                throw new UnauthorizedAccessException("Kullanıcı bulunamadı!");
+            }
+            LoginResponseDto response = await _jwtProvider.CreateToken(user, false);
+            return Ok(response);
+        }
+
+        [HttpPost("[action]")]
         public async Task<IActionResult> GetNewTokenByRefreshToken(GetNewTokenDto request)
         {
             AppUser user = await _userManager.Users.Where(p => p.RefreshToken == request.RefreshToken).FirstOrDefaultAsync();

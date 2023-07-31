@@ -7,6 +7,6 @@ public sealed class ProductImage
     public int Id { get; set; }
 
     [ForeignKey("Product")]
-    public int ProductId { get; set; }
+    public Guid ProductId { get; set; }
     public string ImageUrl { get; set; }
 }

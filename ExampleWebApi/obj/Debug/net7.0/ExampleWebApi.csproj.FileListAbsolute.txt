@@ -84,3 +84,5 @@ C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\Microsoft.AspNetCore.
 C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\ExampleWebApi.staticwebassets.runtime.json
+C:\Tırsan Angular Eğitimi\ExampleWebApi\bin\Debug\net7.0\GenericFileService.dll

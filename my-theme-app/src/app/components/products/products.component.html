@@ -1,0 +1,190 @@
+<app-blank [title]="title" [routes]="routes" [settings]="settings">
+    <div class="card">
+        <app-card>
+            <button class="btn btn-dark btn-sm header" data-bs-toggle="modal" data-bs-target="#modal_add">
+                <i class="ph-plus"></i>
+            </button>
+            <div class="table-responsive" style="min-height: 40vh;">
+                <table class="table text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Main Image</th>
+                            <th>Name</th>
+                            <th>Stock</th>
+                            <th>Price</th>                            
+                            <th class="text-center" style="width: 20px;">
+                                <i class="ph-dots-three"></i>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            <td colspan="5">Today</td>
+                            <td class="text-end">
+                                <span class="progress-meter" id="today-progress" data-progress="30"></span>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let p of products let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>
+                                <img class="table-img" [src]="'assets/files/' + p.mainImageUrl" width="100">
+                                <p class="mt-1">
+                                <img class="me-1 table-img" *ngFor="let i of p.productImages" [src]="'assets/files/' + i.imageUrl" width="50">
+                                </p>
+                            </td>
+                            <td>{{p.name}}</td>
+                            <td>{{p.stock}}</td>
+                            <td>{{p.price}}</td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <a href="#" class="text-body" data-bs-toggle="dropdown">
+                                        <i class="ph-list"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a href="#" class="dropdown-item">
+                                            <i class="ph-chart-line me-2"></i>
+                                            View statement
+                                        </a>
+                                        <a routerLink="/products/{{p.id}}" class="dropdown-item">
+                                            <i class="ph-pencil me-2"></i>
+                                            Edit campaign
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="ph-lock-key me-2"></i>
+                                            Disable campaign
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="ph-gear me-2"></i>
+                                            Settings
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </app-card>
+    </div>
+</app-blank>
+
+<div id="modal_add" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Product</h5>
+                <button type="button" id="modal-add-close-btn" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form #addForm="ngForm" autocomplete="off" (ngSubmit)="save(addForm)">
+            <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Product name"
+                              ngModel
+                              name="name"
+                              required
+                              minlength="3"
+                              #name
+                              id="name"
+                              [appValidate]="name.validity.valid">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-lock text-muted"></i>
+                            </div>
+                            <div class="invalid-feedback">
+                                Validation error!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Stock</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="stock"
+                              ngModel
+                              name="stock"
+                              required
+                              min="1"
+                              #stock
+                              id="stock"
+                              [appValidate]="stock.validity.valid">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-lock text-muted"></i>
+                            </div>
+                            <div class="invalid-feedback">
+                                Validation error!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Price</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="100,00"
+                              ngModel
+                              name="price"
+                              required
+                              min="0"
+                              #price
+                              id="price"
+                              [appValidate]="price.validity.valid">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-lock text-muted"></i>
+                            </div>
+                            <div class="invalid-feedback">
+                                Validation error!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Main Image</label>
+                        <input
+                              type="file"
+                              class="form-control"                              
+                              ngModel
+                              name="mainImage"
+                              (change)="setMainImage($event)"
+                              #mainImage
+                              id="mainImage">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Images</label>
+                        <input
+                              type="file"
+                              class="form-control"                              
+                              ngModel
+                              name="images"
+                              (change)="setImages($event)"
+                              #images
+                              multiple
+                              id="images">
+                    </div>
+                </div>
+            
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger float-start" data-bs-dismiss="modal">
+                    <i class="ph-x me-1"></i>
+                    Close
+                </button>
+                <button [disabled]="!addForm.valid" type="submit" class="btn btn-dark float-end">
+                    <i class="ph-plus me-1"></i>
+                    Save
+                </button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,49 @@
+<!-- Page header -->
+<div class="page-header page-header-light shadow">
+    <div class="page-header-content d-lg-flex">
+        <div class="d-flex">
+            <h4 class="page-title mb-0">
+                <span class="fw-normal">{{title}}</span>
+            </h4>
+
+            <a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+                <i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+            </a>
+        </div>       
+    </div>
+
+    <div class="page-header-content d-lg-flex border-top">
+        <div class="d-flex">
+            <div class="breadcrumb py-2">
+                <a routerLink="/" class="breadcrumb-item"><i class="ph-house"></i></a>
+                <a routerLink="/" class="breadcrumb-item">Home</a>
+                <a *ngFor="let r of routes" [routerLink]="r.link" class="breadcrumb-item active">{{r.name}}</a>
+            </div>            
+        </div>
+
+        <div *ngIf="settings.length > 0" class="collapse d-lg-block ms-lg-auto" id="breadcrumb_elements">
+            <div class="d-lg-flex mb-2 mb-lg-0">
+                <div class="dropdown ms-lg-3">
+                    <a href="#" class="d-flex align-items-center text-body dropdown-toggle py-2" data-bs-toggle="dropdown">
+                        <i class="ph-gear me-2"></i>
+                        <span class="flex-1">Settings</span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-end w-100 w-lg-auto">
+                        <a *ngFor="let s of settings" [routerLink]="s.link" class="dropdown-item">
+                            <i [class]="s.icon"></i>
+                            {{s.name}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /page header -->
+
+
+<!-- Content area -->
+<div class="content">
+    <ng-content></ng-content>
+</div>

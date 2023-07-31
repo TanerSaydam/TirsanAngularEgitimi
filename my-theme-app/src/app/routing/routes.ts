@@ -7,6 +7,10 @@ import { inject } from "@angular/core";
 import { AuthService } from "../services/auth.service";
 import { LockComponent } from "../components/lock/lock.component";
 import { RegisterComponent } from "../components/register/register.component";
+import { combineLatest } from "rxjs";
+import { ProductsComponent } from "../components/products/products.component";
+import { RolesComponent } from "../components/roles/roles.component";
+import { ProductUpdateComponent } from "../components/products/product-update/product-update.component";
 
 export const routes: Routes = [
     {
@@ -29,6 +33,23 @@ export const routes: Routes = [
             {
                 path: "",
                 component: HomeComponent
+            },
+            {
+                path: "products",
+                children: [
+                    {
+                        path: "",
+                        component: ProductsComponent
+                    },
+                    {
+                        path: ":value",
+                        component: ProductUpdateComponent
+                    }
+                ]
+            },
+            {
+                path: "roles",
+                component: RolesComponent
             }
         ]
     },

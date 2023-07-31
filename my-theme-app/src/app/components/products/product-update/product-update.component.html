@@ -1,0 +1,113 @@
+<app-blank [title]="title" [routes]="routes" [settings]="settings">
+    <app-card>
+        <h5 class="header">Product Update</h5>
+        <form #updateForm="ngForm" autocomplete="off" (ngSubmit)="update(updateForm)">
+            <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Product name"
+                              [(ngModel)]="product.name"
+                              name="name"
+                              required
+                              minlength="3"
+                              #name
+                              id="name"
+                              [appValidate]="name.validity.valid">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-lock text-muted"></i>
+                            </div>
+                            <div class="invalid-feedback">
+                                Validation error!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Stock</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="stock"
+                              [(ngModel)]="product.stock"
+                              name="stock"
+                              required
+                              min="1"
+                              #stock
+                              id="stock"
+                              [appValidate]="stock.validity.valid">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-lock text-muted"></i>
+                            </div>
+                            <div class="invalid-feedback">
+                                Validation error!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Price</label>
+                        <div class="form-control-feedback form-control-feedback-start">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="100,00"
+                              [(ngModel)]="product.price"
+                              name="price"
+                              required
+                              min="0"
+                              #price
+                              id="price"
+                              [appValidate]="price.validity.valid">
+                            <div class="form-control-feedback-icon">
+                                <i class="ph-lock text-muted"></i>
+                            </div>
+                            <div class="invalid-feedback">
+                                Validation error!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-1">
+                        <img [src]="'assets/files/' + product.mainImageUrl" width="500">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Main Image</label>
+                        <input
+                              type="file"
+                              class="form-control"                              
+                              ngModel
+                              name="mainImage"
+                              (change)="setMainImage($event)"
+                              #mainImage
+                              id="mainImage">
+                    </div>
+                    <div class="form-group mt-1">
+                        <div *ngFor="let i of product.productImages let ind = index">
+                            <img [src]="'assets/files/' + i.imageUrl" width="100">
+                            <button (click)="removeImage(ind)" class="btn btn-outline-danger btn-sm">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="name">Images</label>
+                        <input
+                              type="file"
+                              class="form-control"                              
+                              ngModel
+                              name="images"
+                              (change)="setImages($event)"
+                              #images
+                              multiple
+                              id="images">
+                    </div>
+                </div>
+                <div class="form-group mt-1">
+                    <button class="btn btn-info w-100">Update</button>
+                </div>
+        </form>
+    </app-card>
+</app-blank>
