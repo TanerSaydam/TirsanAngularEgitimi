@@ -208,8 +208,8 @@ const FileUpload = function() {
             uploadClass: 'btn btn-light',
             removeClass: 'btn btn-light',
             initialPreview: [
-                '../../../assets/images/demo/images/1.png',
-                '../../../assets/images/demo/images/2.png'
+                'assets/images/demo/images/1.png',
+                'assets/images/demo/images/2.png'
             ],
             initialPreviewConfig: [
                 {caption: 'Jane.jpg', size: 930321, key: 1, url: '{$url}'},

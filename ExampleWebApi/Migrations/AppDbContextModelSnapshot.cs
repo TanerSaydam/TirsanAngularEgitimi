@@ -36,6 +36,12 @@ namespace ExampleWebApi.Migrations
                     b.Property<string>("NormalizedName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Section")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
@@ -100,6 +106,45 @@ namespace ExampleWebApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ExampleWebApi.Models.MainRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MainRoles");
+                });
+
+            modelBuilder.Entity("ExampleWebApi.Models.MainRoleWithRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MainRoleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainRoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("MainRoleWithRoles");
                 });
 
             modelBuilder.Entity("ExampleWebApi.Models.Product", b =>
@@ -171,13 +216,72 @@ namespace ExampleWebApi.Migrations
                     b.ToTable("Todos");
                 });
 
+            modelBuilder.Entity("ExampleWebApi.Models.UserWithMainRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MainRoleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainRoleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserWithMainRoles");
+                });
+
+            modelBuilder.Entity("ExampleWebApi.Models.MainRoleWithRole", b =>
+                {
+                    b.HasOne("ExampleWebApi.Models.MainRole", "MainRole")
+                        .WithMany()
+                        .HasForeignKey("MainRoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ExampleWebApi.Models.AppRole", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
+
+                    b.Navigation("MainRole");
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("ExampleWebApi.Models.ProductImage", b =>
                 {
-                    b.HasOne("ExampleWebApi.Models.Product", null)
+                    b.HasOne("ExampleWebApi.Models.Product", "Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ExampleWebApi.Models.UserWithMainRole", b =>
+                {
+                    b.HasOne("ExampleWebApi.Models.MainRole", "MainRole")
+                        .WithMany()
+                        .HasForeignKey("MainRoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ExampleWebApi.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("MainRole");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ExampleWebApi.Models.Product", b =>

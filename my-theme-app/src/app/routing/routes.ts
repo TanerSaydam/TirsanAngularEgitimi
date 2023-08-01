@@ -15,46 +15,27 @@ import { ProductUpdateComponent } from "../components/products/product-update/pr
 export const routes: Routes = [
     {
         path: "register",
+        loadChildren: ()=> import ("../components/register/register.module").then(m=> m.RegisterModule),
         component: RegisterComponent
     },
     {
         path: "login",
+        loadChildren: ()=> import ("../components/login/login.module").then(m=> m.LoginModule),
         component: LoginComponent
     },
     {
         path: "lock",
+        loadChildren: ()=> import ("../components/lock/lock.module").then(m=> m.LockModule),
         component: LockComponent
     },
     {
-        path: "",
-        component: LayoutComponent,
-        canActivateChild: [()=> inject(AuthService).isAuthenticated()],
-        children: [
-            {
-                path: "",
-                component: HomeComponent
-            },
-            {
-                path: "products",
-                children: [
-                    {
-                        path: "",
-                        component: ProductsComponent
-                    },
-                    {
-                        path: ":value",
-                        component: ProductUpdateComponent
-                    }
-                ]
-            },
-            {
-                path: "roles",
-                component: RolesComponent
-            }
-        ]
+        path: "",        
+        loadChildren: ()=> import ("../components/layout/layout.module").then(m=> m.LayoutModule),
+        canActivateChild: [()=> inject(AuthService).isAuthenticated()],        
     },
     {
         path: "**",
+        loadChildren: ()=> import ("../components/not-found/not-found.module").then(m=> m.NotFoundModule),
         component: NotFoundComponent
     }
 ]

@@ -6,6 +6,7 @@ import { LoginResponseModel } from '../models/login.response.model';
 import jwtDecode from 'jwt-decode';
 import { ToastrService } from 'ngx-toastr';
 import { api } from '../const/apiUrl';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,8 @@ export class HttpService {
     private http: HttpClient,
     private router: Router,
     private error: ErrorService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private spinner: NgxSpinnerService
   ) { }
 
   authPost(api: string, data: any, callBack:(res:any)=> void){
@@ -26,12 +28,16 @@ export class HttpService {
       },
       error: (err: HttpErrorResponse)=> {
         console.log(err);
+        this.spinner.hide();
         this.error.errorHandler(err);
       }
     })
   }
 
-  get(api: string, callBack:(res:any)=> void){
+  get(api: string, callBack:(res:any)=> void, isSpinnerShow: boolean = true){
+    if(isSpinnerShow)
+      this.spinner.show();
+
     const result = this.checkToken();
     if(result){
       const response = localStorage.getItem("response");
@@ -43,21 +49,28 @@ export class HttpService {
         }
       }).subscribe({
         next: (res: any)=> {
+          if(isSpinnerShow)
+            this.spinner.hide();
           callBack(res)
         },
         error: (err: HttpErrorResponse)=> {
           console.log(err);
+          this.spinner.hide();
           this.error.errorHandler(err);
         }
       });
     }else{
       this.router.navigateByUrl("/lock");
+      this.spinner.hide();
       this.toastr.error("Oturum süreniz dolmuş! Tekrar giriş yapmalısınız!");
     }
     
   }
 
-  post(api: string, data: any, callBack:(res:any)=> void){
+  post(api: string, data: any, callBack:(res:any)=> void, isSpinnerShow: boolean = true){
+    if(isSpinnerShow)
+      this.spinner.show();
+
     const result = this.checkToken();
     if(result){
       const response = localStorage.getItem("response");
@@ -69,10 +82,13 @@ export class HttpService {
         }
       }).subscribe({
         next: (res: any)=> {
+          if(isSpinnerShow)
+            this.spinner.hide();
           callBack(res)
         },
         error: (err: HttpErrorResponse)=> {
           console.log(err);
+          this.spinner.hide();
           this.error.errorHandler(err);
         }
       });

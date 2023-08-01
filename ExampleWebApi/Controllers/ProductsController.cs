@@ -1,4 +1,5 @@
-﻿using ExampleWebApi.Context;
+﻿using ExampleWebApi.Authorization;
+using ExampleWebApi.Context;
 using ExampleWebApi.Dtos;
 using ExampleWebApi.Models;
 using GenericFileService.Files;
@@ -16,7 +17,7 @@ namespace ExampleWebApi.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly AppDbContext _context;
-
+        private string filePath = @"C:\Tırsan Angular Eğitimi\my-theme-app\src\assets\files\";
         public ProductsController(AppDbContext context)
         {
             _context = context;
@@ -24,8 +25,7 @@ namespace ExampleWebApi.Controllers
 
         [HttpPost("[action]")]
         public async Task<IActionResult> Add([FromForm] ProductAddDto request, CancellationToken cancellationToken)
-        {
-            string filePath = @"C:\Tırsan Angular Eğitimi\my-theme-app\src\assets\files\";
+        {            
             string fileName = FileService.FileSaveToServer(request.MainImage,filePath);
 
             Product product = new()
@@ -62,6 +62,7 @@ namespace ExampleWebApi.Controllers
         }
 
         [HttpGet("[action]")]
+        //[RoleFilter("GetAll","Products")]
         public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
         {
             IList<Product> products = await _context.Products.AsNoTracking().Include(p=> p.ProductImages).OrderBy(p => p.Name).ToListAsync(cancellationToken);
@@ -82,8 +83,7 @@ namespace ExampleWebApi.Controllers
 
         [HttpPost("[action]")]
         public async Task<IActionResult> Update([FromForm] ProductUpdateDto request, CancellationToken cancellationToken)
-        {
-            string filePath = @"C:\Tırsan Angular Eğitimi\my-theme-app\src\assets\files\";
+        {            
             Product product = await _context.Products.Where(p => p.Id == Guid.Parse(request.Id)).Include(p=> p.ProductImages).FirstOrDefaultAsync(cancellationToken);
 
             foreach (var image in product.ProductImages)
@@ -115,6 +115,41 @@ namespace ExampleWebApi.Controllers
             await _context.SaveChangesAsync(cancellationToken);
 
             return Ok(new { Message = "Ürün başarıyla güncellendi!" });
+        }
+
+        [HttpGet("[action]/{id}")]
+        public async Task<IActionResult> RemoveById(string id, CancellationToken cancellationToken)
+        {
+            Product product =
+                await _context.Products
+                .Where(p=> p.Id == Guid.Parse(id))
+                .Include(p=> p.ProductImages)
+                .FirstOrDefaultAsync(cancellationToken);
+
+            string mainImageUrl = product.MainImageUrl;
+            List<string> images = new();
+
+            foreach (var image in product.ProductImages)
+            {
+                images.Add(image.ImageUrl);
+            }
+
+            _context.ProductImages.RemoveRange(product.ProductImages);
+            _context.Products.Remove(product);            
+
+            int count = await _context.SaveChangesAsync(cancellationToken);
+
+            if(count > 0)
+            {
+                FileService.FileDeleteToServer(filePath + mainImageUrl);
+
+                foreach (var image in images)
+                {
+                    FileService.FileDeleteToServer(filePath + image);
+                }
+            }           
+
+            return Ok(new { Message = "Ürün başarıyla silindi" });
         }
     }
 }

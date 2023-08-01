@@ -23,30 +23,18 @@ import { RolesComponent } from './components/roles/roles.component';
 import { BlankComponent } from './common/components/blank/blank.component';
 import { CardComponent } from './common/components/card/card.component';
 import { ProductUpdateComponent } from './components/products/product-update/product-update.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LayoutComponent,
-    HomeComponent,
-    LoginComponent,
-    NotFoundComponent,
-    ValidateDirective,
-    NavbarComponent,
-    LockComponent,
-    RegisterComponent,
-    SidebarComponent,
-    ProductsComponent,
-    RolesComponent,
-    BlankComponent,
-    CardComponent,
-    ProductUpdateComponent
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxSpinnerModule,
     SweetAlert2Module.forRoot({}),
     ToastrModule.forRoot({
       preventDuplicates: true,

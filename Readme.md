@@ -64,4 +64,15 @@
 6) Token Kontrolü
 7) Apiye Token Ekleme
 
+# 7.Ders İşlenen Konular
+1) File Input.js'in Entegresi ve Kullanımı
+2) Generic Route ile Navbar/Sidebar Linklerini Bir Listeden Çekme
+3) Authorization ile Menüde İzin Verilen Sayfaların Gösterimi
+4) Authorization ile Sayfa İçerisinde Table ve Formlarda İzin Verilen Alanların Gösterimi
+5) Backend Kısmında Authorization için Attribute Yazma ve Model Yapısı Kurma
+6) Rollerin Frontend'de Okunması ve Saklanması
+7) Eager Loading Nedir
+8) Lazy Loading Örnekle İle Anlatımı
+9) Eager Loading ile Yazdığımız Projeyi Lazy Loading'e Çevirme
+
 

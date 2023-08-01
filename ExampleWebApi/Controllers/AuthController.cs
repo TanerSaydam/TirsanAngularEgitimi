@@ -21,7 +21,7 @@ namespace ExampleWebApi.Controllers
             _jwtProvider = jwtProvider;
         }
 
-        [HttpPost("[action]")]
+        [HttpPost("[action]")]        
         public async Task<IActionResult> Register(RegisterDto request, CancellationToken cancellationToken)
         {
             string userName = request.UserName.ToLower().Trim().Replace(" ", "");
