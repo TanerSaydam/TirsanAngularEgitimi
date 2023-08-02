@@ -9,10 +9,10 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th *ngIf="checkRole('Table','Main Image')">Main Image</th>
-                            <th *ngIf="checkRole('Table','Name')">Name</th>
-                            <th *ngIf="checkRole('Table','Stock')">Stock</th>
-                            <th *ngIf="checkRole('Table','Price')">Price</th>
+                            <th>Main Image</th>
+                            <th>Name</th>
+                            <th>Stock</th>
+                            <th>Price</th>
                             <th class="text-center" style="width: 20px;">
                                 <i class="ph-dots-three"></i>
                             </th>
@@ -27,27 +27,27 @@
                         </tr> -->
                         <tr *ngFor="let p of products let i = index">
                             <td>{{i + 1}}</td>
-                            <td *ngIf="checkRole('Table','Main Image')">
+                            <td>
                                 <img class="table-img" [src]="'assets/files/' + p.mainImageUrl" width="100">
                                 <p class="mt-1">
                                     <img class="me-1 table-img" *ngFor="let i of p.productImages"
                                         [src]="'assets/files/' + i.imageUrl" width="50">
                                 </p>
                             </td>
-                            <td *ngIf="checkRole('Table','Name')">{{p.name}}</td>
-                            <td *ngIf="checkRole('Table','Stock')">{{p.stock}}</td>
-                            <td *ngIf="checkRole('Table','Price')">{{p.price}}</td>
+                            <td>{{p.name}}</td>
+                            <td>{{p.stock}}</td>
+                            <td>{{p.price}}</td>
                             <td class="text-center">
                                 <div class="dropdown">
                                     <a href="#" class="text-body" data-bs-toggle="dropdown">
                                         <i class="ph-list"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end">
-                                        <a *ngIf="checkRole('Table','Edit')" routerLink="/products/{{p.id}}" class="dropdown-item">
+                                        <a routerLink="/products/{{p.id}}" class="dropdown-item">
                                             <i class="ph-pencil me-2"></i>
                                             Edit campaign
                                         </a>
-                                        <a *ngIf="checkRole('Table','Remove')" (click)="removeById(p.id)" class="dropdown-item">
+                                        <a (click)="removeById(p.id)" class="dropdown-item">
                                             <i class="ph-trash me-2"></i>
                                             Remove
                                         </a>
@@ -74,7 +74,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-6 col-12">
-                            <div class="form-group" *ngIf="checkRole('Add-Form','Name')">
+                            <div class="form-group">
                                 <label for="name">Name</label>
                                 <div class="form-control-feedback form-control-feedback-start">
                                     <input type="text" class="form-control" placeholder="Product name" ngModel
@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-1" *ngIf="checkRole('Add-Form','Stock')">
+                            <div class="form-group mt-1">
                                 <label for="name">Stock</label>
                                 <div class="form-control-feedback form-control-feedback-start">
                                     <input type="number" class="form-control" placeholder="stock" ngModel name="stock"
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-1"  *ngIf="checkRole('Add-Form','Price')">
+                            <div class="form-group mt-1" >
                                 <label for="name">Price</label>
                                 <div class="form-control-feedback form-control-feedback-start">
                                     <input type="text" class="form-control" placeholder="100,00" ngModel name="price"
@@ -114,7 +114,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-1"  *ngIf="checkRole('Add-Form','Main Image Url')">
+                            <div class="form-group mt-1">
                                 <label for="name">Main Image</label>
                                 <input
                                   type="file"
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-12" >                            
-                            <div class="form-group mt-1"  *ngIf="checkRole('Add-Form','Images')">
+                            <div class="form-group mt-1" >
                                 <label for="name">Images</label>
                                 <input
                                   type="file"

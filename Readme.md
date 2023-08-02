@@ -72,7 +72,11 @@
 5) Backend Kısmında Authorization için Attribute Yazma ve Model Yapısı Kurma
 6) Rollerin Frontend'de Okunması ve Saklanması
 7) Eager Loading Nedir
-8) Lazy Loading Örnekle İle Anlatımı
+8) Lazy Loading Örnekle ile Anlatımı
 9) Eager Loading ile Yazdığımız Projeyi Lazy Loading'e Çevirme
 
-
+# 8.Ders İşlenen Konular
+1) Lazy Loading Yapısı Örnek ile Anlatımı
+2) Standalone Yapısı Örnek ile Anlatımı
+3) ngRx Kütüphanesi Örnek ile Anlatımı
+4) Signals Örnek ile Anlatımı
