@@ -80,3 +80,16 @@
 2) Standalone Yapısı Örnek ile Anlatımı
 3) ngRx Kütüphanesi Örnek ile Anlatımı
 4) Signals Örnek ile Anlatımı
+
+# 9.Ders İşlenen Konular
+1) Angular Üzerinden Google ile Giriş
+2) Angular Üzerinden Npm paketi Oluşturma
+3) Clean Architecture Nedir
+4) Clean Architecture Mimarisi Nasıl Çalışır
+5) Clean Arhcitecture Tasarımı 
+6) Controller'ı Ayrı Katmanda İşleme
+7) Assembly Nedir
+8) Middleware Nedir
+9) Exception Middleware
+10) Error Log
+11) Performance Log

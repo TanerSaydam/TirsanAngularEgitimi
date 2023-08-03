@@ -9,7 +9,8 @@ bootstrapApplication(AppComponent,{
     provideRouter([
       {
         path: "login",
-        loadComponent: ()=> import("./app/login/login.component")
+        loadComponent: 
+              ()=> import("./app/login/login.component")
       },
       {
         path: "",

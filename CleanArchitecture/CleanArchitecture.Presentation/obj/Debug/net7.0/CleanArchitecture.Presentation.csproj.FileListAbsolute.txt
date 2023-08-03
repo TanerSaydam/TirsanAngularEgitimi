@@ -1,0 +1,17 @@
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\bin\Debug\net7.0\CleanArchitecture.Presentation.deps.json
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\bin\Debug\net7.0\CleanArchitecture.Presentation.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\bin\Debug\net7.0\CleanArchitecture.Presentation.pdb
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.csproj.AssemblyReference.cache
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.AssemblyInfoInputs.cache
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.AssemblyInfo.cs
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.csproj.CoreCompileInputs.cache
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\refint\CleanArchitecture.Presentation.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.pdb
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\ref\CleanArchitecture.Presentation.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\bin\Debug\net7.0\CleanArchitecture.Domain.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\bin\Debug\net7.0\CleanArchitecture.Persistance.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\bin\Debug\net7.0\CleanArchitecture.Persistance.pdb
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\bin\Debug\net7.0\CleanArchitecture.Domain.pdb
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Presentation\obj\Debug\net7.0\CleanArchitecture.Presentation.csproj.CopyComplete

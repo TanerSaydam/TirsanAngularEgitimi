@@ -1,0 +1,12 @@
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net7.0\CleanArchitecture.Infrastructure.deps.json
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net7.0\CleanArchitecture.Infrastructure.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net7.0\CleanArchitecture.Infrastructure.pdb
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\CleanArchitecture.Infrastructure.csproj.AssemblyReference.cache
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\CleanArchitecture.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\CleanArchitecture.Infrastructure.AssemblyInfoInputs.cache
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\CleanArchitecture.Infrastructure.AssemblyInfo.cs
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\CleanArchitecture.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\CleanArchitecture.Infrastructure.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\refint\CleanArchitecture.Infrastructure.dll
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\CleanArchitecture.Infrastructure.pdb
+C:\Tırsan Angular Eğitimi\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net7.0\ref\CleanArchitecture.Infrastructure.dll
